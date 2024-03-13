@@ -1,15 +1,17 @@
 import { initializeApp } from "firebase/app";
-import {getAuth} from "firebase/auth"
+
+import {getAuth} from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAszuVv-6kdg64-uaVqrpEmJ4vF5Rbk39I",
-  authDomain: "dialogify-99093.firebaseapp.com",
-  projectId: "dialogify-99093",
-  storageBucket: "dialogify-99093.appspot.com",
-  messagingSenderId: "765234191312",
-  appId: "1:765234191312:web:5b25f238c582db40dbf7d5",
-  measurementId: "G-97LWB054FL"
+    apiKey: "AIzaSyC9L0geZC_BcIeHp9XA4VbNWBGqLanFaZo",
+    authDomain: "dialogify-1b956.firebaseapp.com",
+    projectId: "dialogify-1b956",
+    storageBucket: "dialogify-1b956.appspot.com",
+    messagingSenderId: "411382106714",
+    appId: "1:411382106714:web:5b1efec40da87deca96663",
+    measurementId: "G-0WQX1WMXN6"
 };
 
 const app = initializeApp(firebaseConfig);
 export const firebaseAuth = getAuth(app);
+
