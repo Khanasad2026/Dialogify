@@ -8,6 +8,7 @@ import {useRouter} from "next/router";
 import { CHECK_USER_ROUTE } from '../utils/ApiRoutes.js'
 
 function login() {
+  const router = useRouter();
   const handleLogin = async ()=>{
     const provider = new GoogleAuthProvider();
     const {user:{displayName : name,email,photoUrl: profileImage},
@@ -16,6 +17,9 @@ function login() {
     if(email){
       const {data} =await axios.post(CHECK_USER_ROUTE,{email});
       console.log({data});
+      if(!data.status){
+        router.push("/onboarding");
+      }
     }
   }catch(err){
     console.log(err)
